@@ -21,7 +21,7 @@ class RegisterForm(ModelForm):
 
     def save(self, *args, **kwargs):
         super(RegisterForm, self).save(*args, **kwargs)
-        subject=u'Поступила новый заказ на подарок',
+        subject=u'Поступил новый заказ на подарок',
         body_templ="""
             {% for field in form %}
                 {{ field.label }} - {{ field.value }}

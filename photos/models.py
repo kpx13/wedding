@@ -5,7 +5,7 @@ import pytils
 import os
 
 class Photo(models.Model):
-    #title = models.CharField(max_length=256, verbose_name=u'заголовок')
+    title = models.CharField(max_length=256, blank=True, verbose_name=u'заголовок')
     photo = models.ImageField(u'фото', upload_to=lambda instance, filename: 'uploads/photos/' + filename)
     
     class Meta:

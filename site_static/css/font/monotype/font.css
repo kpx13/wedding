@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'MTCORSVA';
+    
+    	src: url('http://fontsforweb.com/public/fonts/6771/MTCORSVA.eot');
+	src: local('MTCORSVA'), url('http://fontsforweb.com/public/fonts/6771/MTCORSVA.ttf') format('truetype');
+    }
+body.cke_show_borders p {
+	font-family: 'MTCORSVA';
+    font-size: 30px;
+}
+.fontsforweb_fontid_6771 {
+	font-family: 'MTCORSVA' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
