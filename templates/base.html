@@ -1,0 +1,30 @@
+{% load thumbnail %}
+
+{% if messages %}
+    {% for message in messages %}
+        <div class='message-wrapper'>
+            <div class="alert alert-{{ message.tags }}">
+                {{ message|safe }}
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}
+
+{% for i in photos %}
+    {% thumbnail i.photo "150x150" as im %}
+        <img src="{{ im.url }}" />
+    {% endthumbnail %}
+{% endfor %}
+
+{% for r in reviews %}
+    <p>
+        {{ r.name }}<br />
+        {{ r.message }}
+    </p>
+{% endfor %}
+
+{% include 'request_form.html' %} 
+
+{% include 'review_form.html' %} 
+
+{% include 'call_form.html' %} 
