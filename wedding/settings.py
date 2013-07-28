@@ -105,8 +105,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'sorl.thumbnail',
+    'livesettings',
     
-    #'pages',
     'call_order',
     'register',
     'review',

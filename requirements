@@ -4,3 +4,4 @@ sorl-thumbnail
 django-keyedcache
 django-admin-tools
 pytils
+django-livesettings

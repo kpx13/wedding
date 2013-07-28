@@ -11,10 +11,19 @@ from register.forms import RegisterForm
 from review.forms import ReviewForm
 from photos.models import Photo
 from review.models import Review
+from livesettings import config_value
+import config
+
 
 def get_common_context(request):
     c = {}
     c['request_url'] = request.path
+    c['settings'] = { 
+                        'email': config_value('MyApp', 'EMAIL'),
+                        'year': config_value('MyApp', 'YEAR'),
+                        'month': config_value('MyApp', 'MONTH'),
+                        'day': config_value('MyApp', 'DAY'),
+                     }
     c.update(csrf(request))
     
     return c

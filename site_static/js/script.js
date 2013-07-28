@@ -172,16 +172,3 @@ $(document).ready(function() {
 
 
 });
-function countdown(){   /* создадим функцию countdown */
-    var today = new Date().getTime();   /* определим сколько милисекунд прошло с 1970 года до данного момента и запишем в переменную today */
-    var end = new Date(2013,7,16).getTime();   /* определим сколько милисекунд пройдет c 1970 до указанного в скобках числа (1 января 2013) и запишем в переменную end */
-    var dateX = new Date(end-today);   /* узнаем разницу в милисекундах и запишем в переменную dateX */
-    var perDays = 60*60*1000*24;   /* произведем расчет милисекунд в сутки и запишем в переменную perDays */
-    date_to_write =
-        '<div id="d-timer">' + (Math.round(dateX/perDays)) + '</div>'+
-    '<div id="h-timer">' + dateX.getUTCHours().toString() + '</div>'+
-            '<div id="m-timer">' + dateX.getMinutes().toString() + '</div>'+
-            '<div id="s-timer">' + dateX.getSeconds().toString() + '</div>';   /* определяем количество дней путем деления dateX на perDays и округляем это значение. А из остатка вычисляем сколько часов, дней, минут и секунд осталось и приводим в строковые данные */
-    var result = document.getElementById('rezult-timer');   /* создадим переменную result, в которую выберем элемент с id rezult */
-    result.innerHTML = date_to_write;    /* вставляем в div rezult результат вычислений */
-}
