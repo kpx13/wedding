@@ -494,10 +494,10 @@ p{
     width: 319px;
     height: 291px;
     float:left;
+    z-index: 0;
+    position: absolute;
     margin-top:70px;
     margin-left: 50px;
-    z-index: 1;
-    position: relative;
 }
 #counter-info{
     position: absolute;

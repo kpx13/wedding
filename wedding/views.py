@@ -46,7 +46,7 @@ def page(request):
         if review_form.is_valid():
             review_form.save()
             review_form = ReviewForm()
-            messages.success(request, u'review')
+            messages.success(request, u'Спасибо! Ваш отзыв отправлен.')
             return HttpResponseRedirect('/')
     else:
         review_form = ReviewForm()
