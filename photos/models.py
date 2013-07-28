@@ -11,4 +11,6 @@ class Photo(models.Model):
     class Meta:
         verbose_name = u'фотография'
         verbose_name_plural = u'фотогаллерея'
-        
+    
+    def __unicode__(self):
+        return self.title
